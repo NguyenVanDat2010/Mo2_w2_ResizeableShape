@@ -36,6 +36,14 @@ public class Rectangle extends Shape implements Resizeable{
         this.length = length;
     }
 
+    public double getArea() {
+        return width * this.length;
+    }
+
+    public double getPerimeter() {
+        return 2 * (width + this.length);
+    }
+
     @Override
     public void resize(double percent) {
         double width=getWidth()+getWidth()*(percent/100);

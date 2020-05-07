@@ -1,8 +1,9 @@
 package shape;
 
+import colorable.Colorable;
 import resizeable.Resizeable;
 
-public class Square extends Rectangle {
+public class Square extends Rectangle implements Colorable {
     private double side = 1;
 
     public Square() {
@@ -46,5 +47,10 @@ public class Square extends Rectangle {
     @Override
     public String toString() {
         return "A square with side = " + getSide() + ", which is a subclass of " + super.toString();
+    }
+
+    @Override
+    public void howToColor(){
+        System.out.println("Color all four sides.");
     }
 }
