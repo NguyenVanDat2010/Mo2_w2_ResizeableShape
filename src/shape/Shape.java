@@ -34,4 +34,6 @@ public abstract class Shape  {
     public String toString() {
         return "A shape with color of " + getColor() + (isFilled() ? " filled" : " not filled");
     }
+
+    public abstract double getArea();
 }

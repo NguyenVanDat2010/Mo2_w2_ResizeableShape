@@ -11,16 +11,25 @@ public class TestColorableOfSquare {
         shapes[1]=new Rectangle(3,3);
         shapes[2]=new Square(6);
 
+//        for (int i=0;i<shapes.length;i++){
+//            if (shapes[i] instanceof Circle){
+//                Circle circle=(Circle) shapes[i];
+//                System.out.println(circle.getArea());
+//            }else if (shapes[i] instanceof Colorable){
+//                Colorable square = (Colorable) shapes[i];
+//                square.howToColor();
+//            }else {
+//                Rectangle rectangle=(Rectangle)shapes[i];
+//                System.out.println(rectangle.getArea());
+//            }
+//        }
+
         for (int i=0;i<shapes.length;i++){
-            if (shapes[i] instanceof Circle){
-                Circle circle=(Circle) shapes[i];
-                System.out.println(circle.getArea());
-            }else if (shapes[i] instanceof Colorable){
-                Square square = (Square) shapes[i];
-                square.howToColor();
+            if (shapes[i] instanceof Colorable){
+                Colorable colorable=(Colorable)shapes[i];
+                colorable.howToColor();
             }else {
-                Rectangle rectangle=(Rectangle)shapes[i];
-                System.out.println(rectangle.getArea());
+                System.out.println(shapes[i].getArea());
             }
         }
     }
